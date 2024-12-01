@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #fff;
-    font-family: 'Trebuchet MS';
+    font-family: "Poppins";
 }
 
 .container {
@@ -42,6 +42,7 @@ footer {
     height: 80px;
     background-color: #808080;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .box {
@@ -57,6 +58,7 @@ footer {
     border-radius: 20px;
     box-shadow: 2px 2px 4px #888888;
     overflow: hidden;
+    gap: 20px; /* Adds spacing for flexibility */
 }
 
 .textbox {
@@ -78,7 +80,6 @@ footer {
     border-radius: 20px;
 }
 
-
 #button-container {
     text-align: center;
     margin-top: 20px;
@@ -88,7 +89,7 @@ footer {
     cursor: pointer;
     padding: 10px 20px;
     margin: 10px;
-    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-family: 'Poppins';
     text-align: center;
     box-shadow: 2px 2px 6px rgb(31, 30, 30);
     transition: all 300ms ease 0ms;
@@ -121,7 +122,7 @@ h2 {
     font-size: 24px;
     color: #333;
     padding-bottom: 10px;
-    line-height: 1em;
+    line-height: 1.5em;
     font-weight: 500;
 }
 
@@ -137,6 +138,7 @@ h6 {
     text-align: center;
     font-weight: 100;
 }
+
 .overlay {
     display: none;
     position: fixed;
@@ -197,33 +199,67 @@ h6 {
 .form-container .btn:hover {
     background-color: rgb(247, 248, 245);
 }
-#popup-heading{
+
+#popup-heading {
     color: #f1f1f1;
     text-align: center;
 }
 
-/* Error Page */
-.box2{
-    margin: auto;
-    width: 90%;
-    max-width: 89%;
-    height: auto;
-    padding: 10px;
-    border-width: 1px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 4px #888888;
-    overflow: hidden;
-    background-color: #F0E4CA;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column; /* Stacks content vertically */
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .textbox {
+        padding-left: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .bt1, .bt2 {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
 }
-.textbox2 {
-    margin: auto;
-    text-align: center;
-}
-.searchingfiles{
-    margin: auto;
-    min-height: 140px;
-    max-height: 300px;
-    min-width: 160px;
-    max-width: 600px;
-    
+
+@media (max-width: 480px) {
+    .textbox {
+        text-align: center; /* Center-aligns text for smaller screens */
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    .bt1, .bt2 {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .form-popup {
+        width: 90%; /* Ensures popup fits on small screens */
+        max-width: 400px;
+    }
 }
